@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eGd-w9-wxG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="maingame" id="BV1-FR-VrT" customClass="GameViewController" customModule="Memory_Maze" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQn-fR-bN0">
+                                <rect key="frame" x="962" y="718" width="95" height="40"/>
+                                <state key="normal" title="Button" image="Home-50.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eGd-w9-wxG" kind="presentation" id="GbK-lX-Ux9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="429"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Kk7-7o-5dg">
+            <objects>
+                <viewController storyboardIdentifier="formss" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eGd-w9-wxG" customClass="MainViewController" customModule="Memory_Maze" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sTr-Ka-XrH"/>
+                        <viewControllerLayoutGuide type="bottom" id="5P8-Wf-2Rj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ziF-tg-Cn6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView userInteractionEnabled="NO" alpha="0.70000000000000018" contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KO5-ss-Btq">
+                                <rect key="frame" x="-12" y="94" width="1055" height="566"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Game Difficulty Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-3G-9ad">
+                                <rect key="frame" x="350" y="660" width="323" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="B1Z-WS-ID8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27S-qg-QTL">
+                                <rect key="frame" x="-10" y="20" width="1042" height="74"/>
+                                <color key="barTintColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="USB Memory Maze &amp; College Path Creator" prompt="created by CIS280 Students | CIS Division of Rock Valley College" id="UNh-Jz-0vQ"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npz-yQ-nqQ">
+                                <rect key="frame" x="571" y="689" width="102" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Yeah Right!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHard:" destination="eGd-w9-wxG" eventType="touchUpInside" id="cKd-kn-b2H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-wx-AOJ">
+                                <rect key="frame" x="461" y="689" width="102" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="0HF-00-dDR"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnMed:" destination="eGd-w9-wxG" eventType="touchUpInside" id="puJ-ZS-7Qr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neB-nr-fx4">
+                                <rect key="frame" x="350" y="689" width="102" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="Tqa-XA-jPr"/>
+                                    <constraint firstAttribute="height" constant="46" id="rcO-RN-QLX"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btneasy:" destination="eGd-w9-wxG" eventType="touchUpInside" id="DOJ-RM-uc9"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Objective: Complete game &amp; get personal website of YOUR college path emailed immediately!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-JV-Eyc">
+                                <rect key="frame" x="689" y="660" width="308" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilefoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-G5-r2u">
+                                <rect key="frame" x="8" y="660" width="96" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="ee6-GH-OzA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="npz-yQ-nqQ" firstAttribute="baseline" secondItem="Gcc-wx-AOJ" secondAttribute="firstBaseline" id="0Oi-q5-7IE"/>
+                            <constraint firstItem="Efo-3G-9ad" firstAttribute="top" secondItem="eh2-G5-r2u" secondAttribute="top" id="8fY-aP-uj9"/>
+                            <constraint firstItem="27S-qg-QTL" firstAttribute="leading" secondItem="ziF-tg-Cn6" secondAttribute="leadingMargin" constant="-26" id="8v3-5V-Yth"/>
+                            <constraint firstItem="Efo-3G-9ad" firstAttribute="leading" secondItem="neB-nr-fx4" secondAttribute="leading" id="9AN-sz-1I5"/>
+                            <constraint firstItem="d2m-JV-Eyc" firstAttribute="top" secondItem="Efo-3G-9ad" secondAttribute="top" id="CCR-b9-37v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d2m-JV-Eyc" secondAttribute="trailing" constant="11" id="Fld-wh-Syc"/>
+                            <constraint firstItem="npz-yQ-nqQ" firstAttribute="baseline" secondItem="Gcc-wx-AOJ" secondAttribute="baseline" id="GFK-nq-1fu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="27S-qg-QTL" secondAttribute="trailing" constant="-24" id="GP5-Za-h5h"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="baseline" secondItem="npz-yQ-nqQ" secondAttribute="firstBaseline" id="GVf-1f-lDL"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="baseline" secondItem="neB-nr-fx4" secondAttribute="baseline" id="I0a-Rc-JP5"/>
+                            <constraint firstItem="d2m-JV-Eyc" firstAttribute="leading" secondItem="Efo-3G-9ad" secondAttribute="trailing" constant="16" id="Mxc-Q5-9fx"/>
+                            <constraint firstItem="5P8-Wf-2Rj" firstAttribute="top" secondItem="neB-nr-fx4" secondAttribute="bottom" constant="33" id="REH-MO-Ybt"/>
+                            <constraint firstItem="npz-yQ-nqQ" firstAttribute="leading" secondItem="Gcc-wx-AOJ" secondAttribute="trailing" constant="8" symbolic="YES" id="agN-nT-Qk7"/>
+                            <constraint firstItem="KO5-ss-Btq" firstAttribute="top" secondItem="27S-qg-QTL" secondAttribute="bottom" id="atQ-Qe-rAm"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="centerX" secondItem="ziF-tg-Cn6" secondAttribute="centerX" id="cRf-RN-oHw"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="baseline" secondItem="neB-nr-fx4" secondAttribute="firstBaseline" id="cb5-cS-Qgd"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="leading" secondItem="neB-nr-fx4" secondAttribute="trailing" constant="9" id="eVu-2V-xUY"/>
+                            <constraint firstItem="d2m-JV-Eyc" firstAttribute="bottom" secondItem="npz-yQ-nqQ" secondAttribute="bottom" id="f1I-CP-gf3"/>
+                            <constraint firstItem="neB-nr-fx4" firstAttribute="top" secondItem="Efo-3G-9ad" secondAttribute="bottom" constant="8" symbolic="YES" id="fxi-BF-QbL"/>
+                            <constraint firstItem="27S-qg-QTL" firstAttribute="top" secondItem="sTr-Ka-XrH" secondAttribute="bottom" id="g30-my-kXo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KO5-ss-Btq" secondAttribute="trailing" constant="-35" id="hxY-ef-dT6"/>
+                            <constraint firstItem="eh2-G5-r2u" firstAttribute="leading" secondItem="ziF-tg-Cn6" secondAttribute="leadingMargin" constant="-8" id="iVS-FU-nnZ"/>
+                            <constraint firstItem="npz-yQ-nqQ" firstAttribute="trailing" secondItem="Efo-3G-9ad" secondAttribute="trailing" id="ktc-89-ipw"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="top" secondItem="npz-yQ-nqQ" secondAttribute="top" id="lMQ-fJ-Mg3"/>
+                            <constraint firstItem="5P8-Wf-2Rj" firstAttribute="top" secondItem="eh2-G5-r2u" secondAttribute="bottom" constant="13" id="mEs-i2-B1t"/>
+                            <constraint firstItem="KO5-ss-Btq" firstAttribute="leading" secondItem="ziF-tg-Cn6" secondAttribute="leadingMargin" constant="-28" id="p1N-zz-u9v"/>
+                            <constraint firstItem="27S-qg-QTL" firstAttribute="centerX" secondItem="Efo-3G-9ad" secondAttribute="centerX" id="pXe-nW-npT"/>
+                            <constraint firstItem="Gcc-wx-AOJ" firstAttribute="top" secondItem="neB-nr-fx4" secondAttribute="top" id="rPz-YG-A8c"/>
+                            <constraint firstItem="d2m-JV-Eyc" firstAttribute="top" secondItem="KO5-ss-Btq" secondAttribute="bottom" id="u6C-Da-ile"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="webview" destination="KO5-ss-Btq" id="tu9-lc-gUo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnY-oy-F4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168" y="393"/>
+        </scene>
+        <!--MyRVC View Controller-->
+        <scene sceneID="n0Q-cB-Gds">
+            <objects>
+                <viewController storyboardIdentifier="myrvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5eR-lm-5wX" customClass="MyRVCViewController" customModule="Memory_Maze" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NjV-Ow-vYf"/>
+                        <viewControllerLayoutGuide type="bottom" id="4DS-RT-nnQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gU3-Hy-Icj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAT-zk-PJ1">
+                                <rect key="frame" x="-10" y="20" width="1042" height="74"/>
+                                <color key="barTintColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="USB Memory Maze &amp; College Path Creator" prompt="created by CIS280 Students | CIS Division of Rock Valley College" id="11K-QD-5v5">
+                                        <barButtonItem key="leftBarButtonItem" image="Home-50.png" width="4" id="Fqk-Oc-nwv">
+                                            <connections>
+                                                <segue destination="eGd-w9-wxG" kind="presentation" id="sPp-mt-Qcf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7d-3f-ceU">
+                                <rect key="frame" x="-10" y="94" width="1042" height="44"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Success! Complete Below " id="cnG-El-XzJ">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;&lt; back" id="pA6-BD-oHm">
+                                            <connections>
+                                                <action selector="btnBackUp:" destination="5eR-lm-5wX" id="kVe-cL-mbF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="forward &gt;&gt;" id="bwj-Ct-j7y">
+                                            <connections>
+                                                <action selector="btnForwardUp:" destination="5eR-lm-5wX" id="Bf4-R6-Ame"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-pf-Zzd">
+                                <rect key="frame" x="-10" y="138" width="1042" height="630"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pAT-zk-PJ1" secondAttribute="trailing" constant="-24" id="4fJ-vY-oty"/>
+                            <constraint firstItem="f7d-3f-ceU" firstAttribute="trailing" secondItem="pAT-zk-PJ1" secondAttribute="trailing" id="5KG-kf-HfY"/>
+                            <constraint firstItem="f7d-3f-ceU" firstAttribute="leading" secondItem="pAT-zk-PJ1" secondAttribute="leading" id="PvS-sF-cbr"/>
+                            <constraint firstItem="pAT-zk-PJ1" firstAttribute="top" secondItem="NjV-Ow-vYf" secondAttribute="bottom" id="TDS-i2-szp"/>
+                            <constraint firstItem="4Le-pf-Zzd" firstAttribute="leading" secondItem="f7d-3f-ceU" secondAttribute="leading" id="U5h-dp-yzY"/>
+                            <constraint firstItem="4Le-pf-Zzd" firstAttribute="top" secondItem="f7d-3f-ceU" secondAttribute="bottom" id="VC7-h3-brp"/>
+                            <constraint firstItem="pAT-zk-PJ1" firstAttribute="leading" secondItem="gU3-Hy-Icj" secondAttribute="leadingMargin" constant="-26" id="WP8-4T-d9X"/>
+                            <constraint firstItem="f7d-3f-ceU" firstAttribute="top" secondItem="pAT-zk-PJ1" secondAttribute="bottom" id="ZdQ-o6-eoS"/>
+                            <constraint firstItem="4Le-pf-Zzd" firstAttribute="trailing" secondItem="f7d-3f-ceU" secondAttribute="trailing" id="sWs-Ot-B1C"/>
+                            <constraint firstItem="4Le-pf-Zzd" firstAttribute="bottom" secondItem="4DS-RT-nnQ" secondAttribute="top" id="uhk-JQ-lDJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="btnBack" destination="Fqk-Oc-nwv" id="Ll1-3y-oaY"/>
+                        <outlet property="webview" destination="4Le-pf-Zzd" id="mWP-eM-wDT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wsy-Ct-GUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264" y="416"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home-50.png" width="40" height="40"/>
+        <image name="profilefoto.png" width="300" height="300"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sPp-mt-Qcf"/>
+    </inferredMetricsTieBreakers>
+</document>
