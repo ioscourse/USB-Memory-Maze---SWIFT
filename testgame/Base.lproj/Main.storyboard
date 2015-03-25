@@ -16,12 +16,15 @@
                         <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQn-fR-bN0">
-                                <rect key="frame" x="962" y="718" width="95" height="40"/>
-                                <state key="normal" title="Button" image="Home-50.png">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQn-fR-bN0">
+                                <rect key="frame" x="673" y="964" width="95" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Hrg-r8-nfh"/>
+                                </constraints>
+                                <state key="normal" image="Home-50.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -30,7 +33,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eQn-fR-bN0" secondAttribute="trailing" id="Buw-Hu-pJw"/>
+                            <constraint firstAttribute="bottom" secondItem="eQn-fR-bN0" secondAttribute="bottom" constant="20" symbolic="YES" id="CCL-Ur-NuC"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnY-oy-F4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="393"/>
+            <point key="canvasLocation" x="1263" y="301"/>
         </scene>
         <!--MyRVC View Controller-->
         <scene sceneID="n0Q-cB-Gds">
@@ -220,8 +228,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-pf-Zzd">
-                                <rect key="frame" x="-10" y="138" width="1042" height="630"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-pf-Zzd">
+                                <rect key="frame" x="-10" y="138" width="1042" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -248,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsy-Ct-GUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="416"/>
+            <point key="canvasLocation" x="2379" y="344"/>
         </scene>
     </scenes>
     <resources>

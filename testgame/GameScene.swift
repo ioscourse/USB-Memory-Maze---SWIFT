@@ -270,6 +270,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if levels == "2"
                 {
                     gpoints = 2
+                    
                 }
                 if levels == "4"
                 {
@@ -283,15 +284,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 {
                     gpoints = 2
                 }
-
+                if score == 1
+                {
+                    scoreLabelNode.text = String(score) + " memory stick"
+                }
+                else
+                {
+                    scoreLabelNode.text = String(score) + " memory sticks"
+                }
+                // Add a little visual feedback for the score increment
+                scoreLabelNode.runAction(SKAction.sequence([SKAction.scaleTo(1.5, duration:NSTimeInterval(0.1)), SKAction.scaleTo(1.0, duration:NSTimeInterval(0.1))]))
                 if score == gpoints
                 {
                     returnToMainMenu()
                 }
-                scoreLabelNode.text = String(score) + " memory stick"
                 
-                // Add a little visual feedback for the score increment
-                scoreLabelNode.runAction(SKAction.sequence([SKAction.scaleTo(1.5, duration:NSTimeInterval(0.1)), SKAction.scaleTo(1.0, duration:NSTimeInterval(0.1))]))
+                
+              
             } else {
                 
                 moving.speed = 0
