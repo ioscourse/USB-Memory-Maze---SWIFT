@@ -14,13 +14,13 @@ import SpriteKit
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
         
-        let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks")
+        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks")
         
         let sceneData = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe, error: nil)
         let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData!)
         
         archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-        let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as GameScene
+        let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
         archiver.finishDecoding()
         return scene
     }
@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
         
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
-            let skView = self.view as SKView
+            let skView = self.view as! SKView
             skView.showsFPS = false
             skView.showsNodeCount = false
             
@@ -65,9 +65,9 @@ class GameViewController: UIViewController {
     }
     func GotoWeb()
     {
-        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("myrvc") as MyRVCViewController
+        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("myrvc")as! MyRVCViewController
         self.presentViewController(vc, animated: true, completion: nil)
-     
+        
     }
     
     

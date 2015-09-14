@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+public var BoolAdmin:Bool=false
+ 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
-   
+  
     var window: UIWindow?
    
 

@@ -10,6 +10,10 @@ import UIKit
 
 class MyRVCViewController: UIViewController {
 
+    @IBOutlet weak var navbar: UINavigationItem!
+   
+
+    
     @IBAction func btnBackUp(sender: UIBarButtonItem) {
         webview.goBack()
     }
@@ -21,6 +25,7 @@ class MyRVCViewController: UIViewController {
     @IBOutlet weak var webview: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
         // Do any additional setup after loading the view.
     }
@@ -31,10 +36,23 @@ class MyRVCViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        let url = NSURL(string: "http://ckonkol.com/cis/")
-        let request = NSURLRequest(URL: url!)
-        webview.scalesPageToFit = true
-        webview.loadRequest(request)
+        if BoolAdmin==false
+        {
+            let url = NSURL(string: "http://ckonkol.com/cis/")
+            let request = NSURLRequest(URL: url!)
+            webview.scalesPageToFit = true
+            webview.loadRequest(request)
+        }
+        else
+        {
+          navbar.title = "Admin Database"
+            BoolAdmin=false
+            let url = NSURL(string: "http://ckonkol.com/cis/report.php")
+            let request = NSURLRequest(URL: url!)
+            webview.scalesPageToFit = true
+            webview.loadRequest(request)
+        }
+       
         
     }
 
