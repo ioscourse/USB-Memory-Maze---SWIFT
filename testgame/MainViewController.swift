@@ -11,6 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var images: UIImageView!
     var newWordField: UITextField!
     var strNewWord:String!
     var count:Int=0
@@ -19,9 +20,9 @@ class MainViewController: UIViewController {
     func wordEntered(alert: UIAlertAction!){
         // store the new word
         strNewWord = self.newWordField.text
-        if  strNewWord == "rvc@dmin77"
+        if  strNewWord == "admin"
         {
-            var vc = self.storyboard?.instantiateViewControllerWithIdentifier("myrvc") as! MyRVCViewController
+            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("myrvc") as! MyRVCViewController
             self.presentViewController(vc, animated: true, completion: nil)
         }
         else
@@ -29,7 +30,7 @@ class MainViewController: UIViewController {
             count += 1
             if count > 2
             {
-                var alert = UIAlertController(title: "Access Denied", message: "To many attempts. Please contact c.konkol@rockvalleycollege.edu", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Access Denied", message: "To many attempts. Please contact c.konkol@rockvalleycollege.edu", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
                 
@@ -43,7 +44,7 @@ class MainViewController: UIViewController {
         textField.placeholder = "Enter Admin Password"
         textField.secureTextEntry = true
         self.newWordField = textField
-        print("asdasdsad" + self.newWordField.text)
+        print("asdasdsad" + self.newWordField.text!)
     }
 
    
@@ -74,26 +75,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-     //  names.text = "hello"
-        levels = "2"
-        var filePath = NSBundle.mainBundle().pathForResource("mygames", ofType: "gif")
         
-        var gif = NSData(contentsOfFile: filePath!)
-        
-     
-//       var webViewBG = UIWebView(frame: self.view.frame)
-//        webViewBG.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-//        
-//        webViewBG.userInteractionEnabled = false;
-//        
-//        self.view.addSubview(webViewBG)
-        
-       webview.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-        
-        webview.userInteractionEnabled = false;
-        
-      
+        let url : NSURL = NSBundle.mainBundle().URLForResource("mygames", withExtension: "gif")!
+       images.image = UIImage.animatedImageWithAnimatedGIFURL(url)
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,7 +89,7 @@ class MainViewController: UIViewController {
     {
         if count > 2
         {
-            var alert = UIAlertController(title: "Access Denied", message: "To many attempts. Please contact c.konkol@rockvalleycollege.edu", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Access Denied", message: "To many attempts. Please contact c.konkol@rockvalleycollege.edu", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             
@@ -128,7 +112,7 @@ class MainViewController: UIViewController {
     {
         if BoolAdmin==false
         {
-            var vc = self.storyboard?.instantiateViewControllerWithIdentifier("maingame") as! GameViewController
+            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("maingame") as! GameViewController
         self.presentViewController(vc, animated: true, completion: nil)
         }
         else
