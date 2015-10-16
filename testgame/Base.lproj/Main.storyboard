@@ -132,13 +132,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="USB Memory Maze &amp; College Path Creator" prompt="created by CIS280 Students | CIS Division of Rock Valley College" id="UNh-Jz-0vQ">
-                                        <barButtonItem key="rightBarButtonItem" title="admin" id="fz7-lF-6wC">
-                                            <connections>
-                                                <action selector="btnAdmin:" destination="eGd-w9-wxG" id="CWx-OZ-nJk"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="USB Memory Maze &amp; College Path Creator" prompt="created by CIS280 Students | CIS Division of Rock Valley College" id="UNh-Jz-0vQ"/>
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Objective: Complete game &amp; get personal website of YOUR college path emailed immediately!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-JV-Eyc">
